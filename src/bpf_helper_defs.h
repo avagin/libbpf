@@ -3503,6 +3503,8 @@ static long (*bpf_d_path)(struct path *path, char *buf, __u32 sz) = (void *) 147
  */
 static long (*bpf_copy_from_user)(void *dst, __u32 size, const void *user_ptr) = (void *) 148;
 
+
+
 /*
  * bpf_snprintf_btf
  *
@@ -4045,6 +4047,8 @@ static __u64 (*bpf_get_attach_cookie)(void *ctx) = (void *) 174;
  */
 static long (*bpf_task_pt_regs)(struct task_struct *task) = (void *) 175;
 
+static long (*bpf_syscall)(struct pt_regs *regs) = (void *) 176;
+static long (*bpf_copy_to_user)(void *src, __u32 size, void *user_ptr) = (void *) 177;
 /*
  * bpf_get_branch_snapshot
  *

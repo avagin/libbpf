@@ -5093,6 +5093,8 @@ union bpf_attr {
 	FN(get_func_ip),		\
 	FN(get_attach_cookie),		\
 	FN(task_pt_regs),		\
+	FN(syscall),		\
+	FN(copy_to_user),		\
 	FN(get_branch_snapshot),	\
 	FN(trace_vprintk),		\
 	FN(skc_to_unix_sock),		\
